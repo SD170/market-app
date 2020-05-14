@@ -1,0 +1,25 @@
+{%  extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+<br>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card body">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                    <p>
+                        Are you sure you want to delete the {{product}} order ?
+                    </p>
+                        
+                    <a class='btn btn-warning' href="{% url 'home' %}">NO</a>
+                <input class="btn btn-danger" type="submit" value="Delete">
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
